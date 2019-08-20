@@ -2,6 +2,7 @@
 import React from "react"; 
 import Display from "./Display.js"; 
 import renderer from "react-test-renderer"; 
+import { render } from "react-testing-library";
 
 describe('<Display />', () => {
     it('matches snapshot', () => {
@@ -10,3 +11,11 @@ describe('<Display />', () => {
       expect(tree.toJSON()).toMatchSnapshot();
     });
   });
+
+  describe("displaying the initial state", () => {
+      it("defaults to Unlocked", () => {
+          const { getByText } = render(<Display />); 
+          expect(getByText(/unlocked/i)).toBeTruthy(); 
+      })
+      
+  })
