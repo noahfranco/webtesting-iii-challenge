@@ -17,5 +17,8 @@ describe('<Display />', () => {
           const { getByText } = render(<Display />); 
           expect(getByText(/unlocked/i)).toBeTruthy(); 
       })
-      
+      it("defaults to open", () => {
+          const { getByText } = render(<Display />); 
+          expect(getByText(/open/i)).toBeTruthy(); 
+      })
   })
