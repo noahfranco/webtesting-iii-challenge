@@ -2,7 +2,7 @@
 import React from "react"; 
 import renderer from "react-test-renderer"; 
 import Controls from "./Controls.js"; 
-import { render } from "react-testing-library"; 
+import { render } from "@testing-library/react"; 
 
 describe("Button Defaluts to unlocked and open" , () => {
     it("Defaluts to unlocked", () => {

@@ -2,7 +2,7 @@
 import React from "react"; 
 import Display from "./Display.js"; 
 import renderer from "react-test-renderer"; 
-import { render } from "react-testing-library";
+import { render } from "@testing-library/react";
 
 describe('<Display />', () => {
     it('matches snapshot', () => {
